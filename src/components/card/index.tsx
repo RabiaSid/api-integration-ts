@@ -28,7 +28,7 @@ export default function CustomizedCard(props: CardProps) {
   const { name, email, body, onClick, onEditClick, onDeleteClick } = props;
 
   return (
-    <Card sx={{ minWidth: 275, background: "#ebeeef" }} onClick={onClick}>
+    <Card sx={{ minWidth: 275, background: "#ebeeef" }} >
       <CardContent>
         <Typography variant="h5" component="div">
           {name}
@@ -37,6 +37,9 @@ export default function CustomizedCard(props: CardProps) {
           {email}
         </Typography>
         <Typography variant="body2">{body}</Typography>
+        <Typography sx={{ mb: 1.5, color:"blue" }} color="text.secondary" onClick={onClick}>
+          more detail
+        </Typography>
       </CardContent>
       <CardActions>
         <Button color="primary" variant="outlined" label="Edit" onClick={onEditClick}/>
