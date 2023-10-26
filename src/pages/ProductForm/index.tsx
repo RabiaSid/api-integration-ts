@@ -26,7 +26,7 @@ export default function ProductForm() {
 
   // new post
   const newPost = () => {
-    post.userId = 501;
+    post.postId = 501;
     Post(`comments`, post)
       .then((res) => {
         console.log("Successfully Add New --Post", res.data);
@@ -69,12 +69,12 @@ export default function ProductForm() {
           sx={{ padding: "5px", marginY: "5px" }}
         >
           <Form
-            valueName={post.name}
-            onChangeName={(e) => setPost({ ...post, title: e.target.value })}
-            valueEmail={post.email}
-            onChangeEmail={(e) => setPost({ ...post, title: e.target.value })}
-            valueBody={post.body}
-            onChangeBody={(e) => setPost({ ...post, title: e.target.value })}
+            valueName={post.name ?? ""}
+            onChangeName={(e) => setPost({ ...post, name: e.target.value })}
+            valueEmail={post.email ?? ""}
+            onChangeEmail={(e) => setPost({ ...post, email: e.target.value })}
+            valueBody={post.body ?? ""}
+            onChangeBody={(e) => setPost({ ...post, body: e.target.value })}
           />
           {params.id ? (
             <Button

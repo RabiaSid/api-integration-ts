@@ -21,7 +21,7 @@ export default function InputField( props: InputFieldProps ) {
     //   noValidate
     //   autoComplete="off"
     >
-      <TextField label={label} value={value} onChange={onChange} color="primary" focused  fullWidth />
+      <TextField label={label}  value={value} onChange={onChange} color="primary" focused  fullWidth />
     </Box>
   );
 }

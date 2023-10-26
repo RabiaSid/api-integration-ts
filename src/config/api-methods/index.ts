@@ -14,8 +14,8 @@ export const Delete = (endPoint:String, id?:string|number) => {
     return apiHandle.delete(`${endPoint}/${id ? id : ''}`)
 }
 export const Put = (endPoint:String, id?:string|number) => {
-    return apiHandle.put(`${endPoint}`)
+    return apiHandle.put(`${endPoint}/`)
 }
 export const  Post = (endPoint:String, id?:string|number) => {
-    return apiHandle.post(`${endPoint}/`)
+    return apiHandle.post(`${endPoint}`)
 }
